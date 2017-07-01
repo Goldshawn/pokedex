@@ -195,6 +195,7 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                         <connections>
+                                            <action selector="backBtnPressed:" destination="1oq-ot-DMf" eventType="touchUpInside" id="Y5e-mE-Qxa"/>
                                             <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7hI-4M-El7"/>
                                         </connections>
                                     </button>
@@ -261,16 +262,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-QJ-etC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="141" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="140" height="20.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdF-59-Axg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdF-59-Axg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                                 <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poison/Grass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNU-S5-H16">
-                                                                <rect key="frame" x="53.5" y="0.0" width="87.5" height="20.5"/>
+                                                                <rect key="frame" x="52.5" y="0.0" width="87.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -446,7 +447,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attackLbl" destination="tcb-0g-7va" id="CBJ-B2-DBc"/>
+                        <outlet property="currentEvoLbl" destination="1jf-V9-mZ5" id="add-hz-xCi"/>
+                        <outlet property="defenseLbl" destination="ZCm-wx-MCX" id="eOv-m3-jY7"/>
+                        <outlet property="descriptionLbl" destination="3wj-MZ-V5q" id="nbA-52-QMK"/>
+                        <outlet property="evoLbl" destination="BZ9-FF-Wns" id="tDj-0D-wA2"/>
+                        <outlet property="heightLbl" destination="PHc-uM-8SQ" id="K8v-Jc-dWE"/>
+                        <outlet property="mainImg" destination="hdX-bV-47f" id="1ly-Hs-Qky"/>
                         <outlet property="nameLBL" destination="zdk-dY-r9M" id="HpI-qk-mY9"/>
+                        <outlet property="nextEvoLbl" destination="g3Q-Np-z2m" id="mPq-IZ-Ln7"/>
+                        <outlet property="pokedexIdLbl" destination="SYy-Jk-seS" id="CBs-lS-QIr"/>
+                        <outlet property="typeLbl" destination="UNU-S5-H16" id="1mU-Fv-jR8"/>
+                        <outlet property="weightLbl" destination="28s-o7-kaK" id="1nP-pj-VmF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsq-SR-ylv" userLabel="First Responder" sceneMemberID="firstResponder"/>
