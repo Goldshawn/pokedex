@@ -16,6 +16,7 @@
 		718447251F0567F90046A97A /* pokedexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718447241F0567F90046A97A /* pokedexUITests.swift */; };
 		718447331F056C860046A97A /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 718447321F056C860046A97A /* pokemon.csv */; };
 		718447371F056D540046A97A /* pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718447361F056D540046A97A /* pokemon.swift */; };
+		71B19A2C1F079FA100704BFF /* pokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B19A2B1F079FA100704BFF /* pokeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		718447261F0567F90046A97A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		718447321F056C860046A97A /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		718447361F056D540046A97A /* pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokemon.swift; sourceTree = "<group>"; };
+		71B19A2B1F079FA100704BFF /* pokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		718447351F056D400046A97A /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				71B19A2B1F079FA100704BFF /* pokeCell.swift */,
 			);
 			name = VIew;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B19A2C1F079FA100704BFF /* pokeCell.swift in Sources */,
 				718447371F056D540046A97A /* pokemon.swift in Sources */,
 				718447071F0567F90046A97A /* PokedexVC.swift in Sources */,
 				718447051F0567F90046A97A /* AppDelegate.swift in Sources */,
@@ -540,6 +544,7 @@
 				7184472B1F0567F90046A97A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7184472C1F0567F90046A97A /* Build configuration list for PBXNativeTarget "pokedexTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +553,7 @@
 				7184472E1F0567F90046A97A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7184472F1F0567F90046A97A /* Build configuration list for PBXNativeTarget "pokedexUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +562,7 @@
 				718447311F0567F90046A97A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
