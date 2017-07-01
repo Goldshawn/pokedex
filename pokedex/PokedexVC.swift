@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PokedexVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collection: UICollectionView!
     
     var pokemon = [Pokemon]()
-    
+    var musicPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,24 @@ class PokedexVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         collection.dataSource = self
         collection.delegate = self
         parsePokemonCSV()
+        
+        initAdudio()
+    }
+    
+    func initAdudio() {
+        
+        let path = Bundle.main.path(forResource: "music", ofType: "mp3")
+        
+        do {
+            musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path!)!)
+            musicPlayer.prepareToPlay()
+            musicPlayer.numberOfLoops = -1
+            musicPlayer.play()
+            
+        }catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
     }
     
     func parsePokemonCSV(){
@@ -31,7 +50,6 @@ class PokedexVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         do {
             let csv = try CSV(contentsOfURL: path)
             let rows = csv.rows
-            print(rows)
             
             for row in rows{
                 let pokeID = Int(row["id"]!)
@@ -42,7 +60,7 @@ class PokedexVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                 pokemon.append(poke)
             }
         }catch let err as NSError{
-            print(err.localizedDescription)
+            print(err.debugDescription)
         }
         
     }
@@ -80,8 +98,18 @@ class PokedexVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 110, height: 100)
+        return CGSize(width: 80, height: 100)
     }
     
+    @IBAction func musicButtonPressed(_ sender: Any) {
+        
+        if musicPlayer.isPlaying{
+            musicPlayer.pause()
+            (sender as! UIButton).alpha = 0.2
+        }else{
+            musicPlayer.play()
+            (sender as! UIButton).alpha = 1.0
+        }
+    }
 }
 
